@@ -1,0 +1,64 @@
+/*
+ * CORE STYLES - Sets the global appearance
+ */
+ body {
+    /* Sets pure Helvetica as requested */
+    font-family: Helvetica, Arial, sans-serif; 
+    
+    /* Removes the default browser margin */
+    margin: 0;
+    
+    /* Sets pure white background */
+    background-color: #fff; 
+    /* Ensures text is black */
+    color: #000; 
+}
+
+/* * CONTENT CONTAINER STYLES (Applies to the <main id="lore-content"> block)
+ * Controls Left-Alignment and content width
+ */
+#lore-content {
+    /* Sets content width */
+    width: 80%;
+    max-width: 900px;
+    
+    /* LEFT ALIGNMENT FIX: 
+     * 40px top margin, 0 right margin, 40px bottom margin, 30px left margin 
+     */
+    margin: 40px 0 40px 30px; 
+    
+    /* Ensures clean background */
+    background-color: #fff; 
+    padding: 30px;
+    /* Removes all shadows */
+    box-shadow: none; 
+    line-height: 1.6;
+}
+
+/* * TYPOGRAPHY STYLES
+ */
+h3 {
+    /* Ensures black color */
+    color: #000; 
+    /* No border */
+    border-bottom: none; 
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+/* * LINK STYLES
+ */
+a {
+    /* Sets all links to the specified blue color */
+    color: #0000ee; 
+    /* Removes default underline */
+}
+
+/* Adds underline on hover for accessibility */
+a:hover {
+    text-decoration: underline;
+}
