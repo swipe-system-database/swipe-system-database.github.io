@@ -5,39 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Swipe System Wiki</title>
     <link rel="stylesheet" href="style.css">
-   <style>
-    body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-        background-color: #f8f9fa; /* Wikipedia-ish background */
-    }
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background-color: white;
+        }
 
-    .wrapper {
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden; /* Hides horizontal scroll */
-        overflow-y: auto;   /* Allows vertical scroll */
-    }
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* This keeps it centered */
+        }
 
-    iframe {
-        /* We make the 'paper' 150% wide to trick Google into spreading the text... */
-        width: 150%; 
-        height: 200%; /* Height is long to accommodate all the lore */
-        
-        /* ...then we shift it left to keep the text centered on your screen */
-        margin-left: -25%; 
-        
-        border: none;
-    }
-</style>
+        iframe {
+            /* We make the iframe wider than 100% to push Google's margins 'off-screen' */
+            width: 120%; 
+            height: 100%;
+            
+            /* This zooms the content so the text looks normal size but spreads out */
+            transform: scale(1); 
+            
+            /* This ensures the middle of the Google Doc stays in the middle of the screen */
+            border: none;
+            flex-shrink: 0; 
+        }
+
+        /* If it's still slightly off, we use this to nudge it back to the center */
+        .content-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
 
     <div class="wrapper">
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0DjcfzkgfONVNNZOWROhp4HI9_H0_XvZ4DX0Ag6Q-_PSd2q1a3aQ-wTY6GLFg2Q0ozjZ7WWfP1Ob6/pub?embedded=true"></iframe>
+        <div class="content-container">
+            <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0DjcfzkgfONVNNZOWROhp4HI9_H0_XvZ4DX0Ag6Q-_PSd2q1a3aQ-wTY6GLFg2Q0ozjZ7WWfP1Ob6/pub?embedded=true"></iframe>
+        </div>
     </div>
 
 </body>
