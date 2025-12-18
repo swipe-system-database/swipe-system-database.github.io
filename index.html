@@ -6,31 +6,44 @@
     <title>Swipe System Wiki</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+        /* Prevents the main page from having scrollbars so the Google Doc handles it */
+        body, html {
             margin: 0;
             padding: 0;
+            height: 100%;
+            width: 100%;
             overflow: hidden; 
             background-color: white; 
         }
 
+        /* The wrapper acts like a window. It hides the 'zoomed out' parts of the iframe. */
         .wrapper {
             width: 100%;
             height: 100vh;
-            overflow: hidden;
+            overflow: hidden; 
             display: flex;
-            justify-content: center; /* Centers the content horizontally */
+            justify-content: center; 
+            align-items: flex-start;
         }
 
         iframe {
-            /* We make the iframe wider than the screen to 'crop out' Google's margins */
-            width: 140%; 
-            height: 140%;
+            /* We make the iframe narrower but then scale it up to 'stretch' the text */
+            width: 75%; 
+            height: 100%;
             
-            /* This zooms the content back out so it fits, but the 'Wide' setting stays */
-            transform: scale(0.71); 
+            /* Zooming in by 1.35x to push the text toward the edges */
+            transform: scale(1.35); 
             transform-origin: top center;
             
             border: none;
+        }
+
+        /* Mobile adjustment: Makes sure it doesn't look weird on phones */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
