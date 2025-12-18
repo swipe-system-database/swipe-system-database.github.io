@@ -6,22 +6,39 @@
     <title>Swipe System Wiki</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* This makes the embed fill the whole screen */
-        iframe {
-            width: 100%;
-            height: 100vh; /* 'vh' means viewport height, so 100% of the screen */
-            border: none;
-        }
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden; /* This prevents double scrollbars */
+            overflow: hidden; 
+            background-color: white; 
+        }
+
+        .wrapper {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center; /* Centers the content horizontally */
+        }
+
+        iframe {
+            /* We make the iframe wider than the screen to 'crop out' Google's margins */
+            width: 140%; 
+            height: 140%;
+            
+            /* This zooms the content back out so it fits, but the 'Wide' setting stays */
+            transform: scale(0.71); 
+            transform-origin: top center;
+            
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0DjcfzkgfONVNNZOWROhp4HI9_H0_XvZ4DX0Ag6Q-_PSd2q1a3aQ-wTY6GLFg2Q0ozjZ7WWfP1Ob6/pub?embedded=true"></iframe>
+    <div class="wrapper">
+        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0DjcfzkgfONVNNZOWROhp4HI9_H0_XvZ4DX0Ag6Q-_PSd2q1a3aQ-wTY6GLFg2Q0ozjZ7WWfP1Ob6/pub?embedded=true"></iframe>
+    </div>
 
 </body>
 </html>
