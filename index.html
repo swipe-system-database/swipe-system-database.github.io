@@ -10,25 +10,36 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            background-color: #f0f0f0; /* Slight grey background like a wiki */
-            overflow: hidden; /* Prevents double scrollbars */
+            overflow: hidden; 
+            background-color: white; /* No more grey */
         }
 
         .wrapper {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
             display: flex;
             justify-content: center;
-            height: 100vh;
-            width: 100%;
         }
 
         iframe {
-            /* This is the sweet spot for readability */
-            width: 100%;
-            max-width: 900px; 
-            height: 100%;
+            /* We make the 'container' slightly smaller... */
+            width: 85%; 
+            height: 120%; 
+            
+            /* ...and then SCALE it up to stretch the text to the edges */
+            transform: scale(1.2); 
+            transform-origin: top center;
+            
             border: none;
-            background-color: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Adds a nice paper effect */
+        }
+
+        /* For mobile, we stop the scaling so it doesn't cut off */
+        @media (max-width: 768px) {
+            iframe {
+                width: 100%;
+                transform: scale(1);
+            }
         }
     </style>
 </head>
