@@ -11,43 +11,19 @@
             height: 100%;
             width: 100%;
             overflow: hidden; 
-            background-color: white; /* No more grey */
-        }
-
-        .wrapper {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
+            background-color: white;
         }
 
         iframe {
-            /* We make the 'container' slightly smaller... */
-            width: 85%; 
-            height: 120%; 
-            
-            /* ...and then SCALE it up to stretch the text to the edges */
-            transform: scale(1.2); 
-            transform-origin: top center;
-            
+            width: 100%;
+            height: 100vh;
             border: none;
-        }
-
-        /* For mobile, we stop the scaling so it doesn't cut off */
-        @media (max-width: 768px) {
-            iframe {
-                width: 100%;
-                transform: scale(1);
-            }
         }
     </style>
 </head>
 <body>
 
-    <div class="wrapper">
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vS0DjcfzkgfONVNNZOWROhp4HI9_H0_XvZ4DX0Ag6Q-_PSd2q1a3aQ-wTY6GLFg2Q0ozjZ7WWfP1Ob6/pub?embedded=true"></iframe>
-    </div>
+    <iframe src="https://docs.google.com/document/d/1fZ8vRevPcdMTMTUW_YLFJ1DKpbArP1igbvjRSO3VLvU/preview?rm=minimal"></iframe>
 
 </body>
 </html>
