@@ -10,20 +10,35 @@
             padding: 0;
             height: 100%;
             width: 100%;
-            overflow: hidden; 
+            overflow: hidden;
             background-color: white;
         }
 
-        iframe {
+        .container {
             width: 100%;
             height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        iframe {
+            /* We make the iframe WIDER than the screen (110%) */
+            width: 110%; 
+            height: 100%;
             border: none;
+            
+            /* Then we shift it LEFT to hide that 'invisible wall' on the left */
+            margin-left: -5%; 
+            
+            /* This effectively pulls the text toward the screen edges */
         }
     </style>
 </head>
 <body>
 
-    <iframe src="https://docs.google.com/document/d/1fZ8vRevPcdMTMTUW_YLFJ1DKpbArP1igbvjRSO3VLvU/preview?rm=minimal"></iframe>
+    <div class="container">
+        <iframe src="https://docs.google.com/document/d/1fZ8vRevPcdMTMTUW_YLFJ1DKpbArP1igbvjRSO3VLvU/preview?rm=minimal"></iframe>
+    </div>
 
 </body>
 </html>
