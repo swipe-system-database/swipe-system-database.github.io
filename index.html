@@ -4,11 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Terraversal Comics | Official Series Description by All Peace Above</title>
+    <title>Terraversal Comics | Official Wiki & Series Description</title>
 
-    <meta name="description" content="Official wiki and description for Terraversal Comics, an original comic series created by All Peace Above.">
+    <meta name="description" content="The official wiki for Terraversal Comics by All Peace Above. Featuring lore, world-building, and character bios for Ethan Glockenspiel Duster.">
 
-    <meta name="google-site-verification" content="YOUR_CODE_HERE" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWorkSeries",
+      "name": "Terraversal Comics",
+      "url": "https://terraversalcomics.univer.se",
+      "author": {
+        "@type": "Person",
+        "name": "All Peace Above"
+      },
+      "description": "An original comic series featuring the adventures of Ethan Glockenspiel Duster.",
+      "genre": "Comic Series",
+      "about": [
+        {
+          "@type": "Person",
+          "name": "Ethan Glockenspiel Duster",
+          "description": "The main character of the Terraversal Comics series."
+        }
+      ]
+    }
+    </script>
 
     <style>
         body, html {
@@ -18,6 +38,7 @@
             width: 100%;
             overflow: hidden;
             background-color: white;
+            font-family: sans-serif;
         }
 
         .container {
@@ -27,18 +48,39 @@
             position: relative;
         }
 
+        /* Your custom swipe-system styles */
         iframe {
             width: 110%; 
             height: 100%;
             border: none;
             margin-left: -13%; 
         }
+
+        /* 4. HIDDEN TEXT FOR BOTS: Visible to Google, invisible to fans */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
     </style>
 </head>
 <body>
 
+    <div class="sr-only">
+        <h1>Terraversal Comics Wiki</h1>
+        <p>This is the official description and lore for the comic series Terraversal Comics, created by All Peace Above. The story follows the character Ethan Glockenspiel Duster.</p>
+    </div>
+
     <div class="container">
-        <iframe src="https://docs.google.com/document/d/1fZ8vRevPcdMTMTUW_YLFJ1DKpbArP1igbvjRSO3VLvU/preview?rm=minimal"></iframe>
+        <iframe 
+            title="Terraversal Comics Official Lore Document"
+            src="https://docs.google.com/document/d/1fZ8vRevPcdMTMTUW_YLFJ1DKpbArP1igbvjRSO3VLvU/preview?rm=minimal">
+        </iframe>
     </div>
 
 </body>
